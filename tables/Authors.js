@@ -13,15 +13,15 @@ table.columns = {
 
 table.dynamicSchema = false;
 
-table.insert(function (context) {
-    context.item.idUsuario = context.user.id;
-    return context.execute();
-});
-
-table.read(function (context) {
-    context.query.where( { idUsuario : context.user.id } );
-    return context.execute();
-});
+// table.insert(function (context) {
+//     context.item.idUsuario = context.user.id;
+//     return context.execute();
+// });
+//
+// table.read(function (context) {
+//     context.query.where( { idUsuario : context.user.id } );
+//     return context.execute();
+// });
 
 table.read.access = 'anonymous';
 table.update.access = 'authenticated';
