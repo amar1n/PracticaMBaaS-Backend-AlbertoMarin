@@ -23,6 +23,6 @@ var api = {
     //put: functi..
 };
 
-api.get.access = 'authenticated';
+api.get.access = 'anonymous';
 
 module.exports = api;
