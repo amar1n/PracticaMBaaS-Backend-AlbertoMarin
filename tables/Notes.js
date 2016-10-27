@@ -25,7 +25,7 @@ table.insert(function (context) {
 });
 
 table.read(function (context) {
-    console.log(context);
+    console.log('........................................amg: ' + context);
     context.query.where( { author : context.user.id } );
     return context.execute();
 });
