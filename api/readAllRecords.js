@@ -9,7 +9,8 @@ var api = {
         }
 
         var context = req.azureMobile;
-//        var userId = context.user.id;
+        var userId = context.user.id;
+        console.log('...................userId: ' + userId);
         var query = {
             sql: "select * from Notes"
         };
