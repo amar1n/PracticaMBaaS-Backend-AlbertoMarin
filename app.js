@@ -10,4 +10,4 @@ mobile.api.import("./api");
 
 app.use(mobile);
 
-app.listen(process.env.PORT || 4000);
+app.listen(process.env.PORT || 3000);
