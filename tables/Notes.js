@@ -16,8 +16,8 @@ table.columns = {
 table.dynamicSchema = false;
 
 table.read.access = 'anonymous';
-table.update.access = 'authenticated';
-table.delete.access = 'authenticated';
-table.insert.access = 'authenticated';
+table.update.access = 'anonymous';
+table.delete.access = 'anonymous';
+table.insert.access = 'anonymous';
 
 module.exports = table;
