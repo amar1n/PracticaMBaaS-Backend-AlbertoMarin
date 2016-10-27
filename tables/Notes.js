@@ -19,16 +19,16 @@ table.columns = {
 
 table.dynamicSchema = false;
 
-table.insert(function (context) {
-    context.item.author = context.user.id;
-    return context.execute();
-});
-
-table.read(function (context) {
-    console.log('........................................amg: ' + context.user);
-    context.query.where( { author : context.user.id } );
-    return context.execute();
-});
+// table.insert(function (context) {
+//     context.item.author = context.user.id;
+//     return context.execute();
+// });
+//
+// table.read(function (context) {
+//     console.log('........................................amg: ' + context.user);
+//     context.query.where( { author : context.user.id } );
+//     return context.execute();
+// });
 
 table.read.access = 'anonymous';
 table.update.access = 'authenticated';
