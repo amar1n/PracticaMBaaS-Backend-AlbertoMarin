@@ -29,7 +29,7 @@ table.read(function (context) {
     return context.execute();
 });
 
-table.read.access = 'authenticated';
+table.read.access = 'anonymous';
 table.update.access = 'authenticated';
 table.delete.access = 'authenticated';
 table.insert.access = 'authenticated';
