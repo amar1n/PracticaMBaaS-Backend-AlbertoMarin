@@ -8,9 +8,10 @@ var api = {
             return next();
         }
 
+        // var userId = context.user.id;
+        // console.log('...................userId: ' + userId);
+
         var context = req.azureMobile;
-        var userId = context.user.id;
-        console.log('...................userId: ' + userId);
         var query = {
             sql: "select * from Notas"
         };
