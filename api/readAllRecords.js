@@ -12,7 +12,7 @@ var api = {
         var userId = context.user.id;
         console.log('...................userId: ' + userId);
         var query = {
-            sql: "select * from Notes"
+            sql: "select * from Notas"
         };
 
         context.data.execute(query)
