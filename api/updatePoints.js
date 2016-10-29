@@ -4,22 +4,18 @@
 
 var api = {
     get: function (req, res, next) {
-        console.log(".....................1");
         if (req.param.length < 0) {
             return next();
         }
-        console.log(".....................2");
 
         var context = req.azureMobile;
-        console.log(".....................3");
         var query = {
-            sql: "update Notas set puntos = " + req.query.puntos
+            sql: "update Notas set puntos = " + req.query.puntos + " where id = '" + req.query.id + "'"
         };
-        console.log(".....................4");
 
         context.data.execute(query)
             .then(function (result) {
-                res.status(200).json({message: 'AMG'});
+                res.status(200).json({result: result});
             });
     }
 };
