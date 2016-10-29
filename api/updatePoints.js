@@ -10,7 +10,7 @@ var api = {
 
         var context = req.azureMobile;
         var query = {
-            sql: "update Notas set puntos = " + req.query.puntos + " where id = '" + req.query.id + "'"
+            sql: "update Notas set puntos = " + req.query.puntos + ", votos = votos+1 where id = '" + req.query.id + "'"
         };
 
         console.log("................"+query.sql);
