@@ -19,7 +19,7 @@ var api = {
 
         context.data.execute(query)
             .then(function (result) {
-                res.json(result);
+                res.status(200).json({message: 'AMG'});
             });
     }
 };
