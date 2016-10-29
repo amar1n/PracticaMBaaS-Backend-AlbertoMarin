@@ -3,15 +3,17 @@
  */
 
 var api = {
-    post: function (req, res, next) {
+    get: function (req, res, next) {
+        if (req.param.length < 0) {
+            return next();
+        }
 
-        //this is how we access the table
-        var tabla = req.azureMobile.tables('Notas');
+        var context = req.azureMobile;
         var query = {
-            sql: "update Notas set puntos = 69"
+            sql: "update Notas set puntos = " + req.query.puntos
         };
 
-        tabla.update(query)
+        context.data.execute(query)
             .then(function (result) {
                 res.json(result);
             });
