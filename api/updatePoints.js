@@ -13,7 +13,7 @@ var api = {
             sql: "update Notas set puntos = " + req.query.puntos + " where id = '" + req.query.id + "'"
         };
 
-        console.log("................"+sql);
+        console.log("................"+query);
 
         context.data.execute(query)
             .then(function (result) {
