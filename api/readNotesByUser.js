@@ -13,7 +13,7 @@ var api = {
         console.log('...................userId: ' + userId);
 
         var query = {
-            sql: "select * from Notas where autor = '" + userId + "'"
+            sql: "select * from Notas where autor = '" + userId + "' and deleted = 0"
         };
 
         context.data.execute(query)

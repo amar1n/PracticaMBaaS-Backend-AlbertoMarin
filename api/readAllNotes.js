@@ -13,7 +13,7 @@ var api = {
 
         var context = req.azureMobile;
         var query = {
-            sql: "select * from Notas"
+            sql: "select * from Notas where deleted = 0"
         };
 
         context.data.execute(query)
