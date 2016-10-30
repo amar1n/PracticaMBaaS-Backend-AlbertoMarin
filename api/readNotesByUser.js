@@ -21,8 +21,6 @@ var api = {
                 res.json(result);
             });
     }
-
-    //put: functi..
 };
 
 api.get.access = 'authenticated';

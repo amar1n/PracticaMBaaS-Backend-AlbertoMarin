@@ -8,12 +8,10 @@ var api = {
             return next();
         }
 
-        // var userId = context.user.id;
-        // console.log('...................userId: ' + userId);
-
         var context = req.azureMobile;
+        // Las notas que están activas (deleted = 0) y que están publicadas (estado = 1)
         var query = {
-            sql: "select * from Notas where deleted = 0"
+            sql: "select * from Notas where deleted = 0 and estado = 1"
         };
 
         context.data.execute(query)
